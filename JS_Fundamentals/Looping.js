@@ -2,21 +2,12 @@
 // array of every number in the array that is divisible
 // by either 3 or 5, but not both.
 function fizzBuzz(array) {
-  const magic1 = 3;
-  const magic2 = 5;
-  function isDivisible(value) {
-    if (value % 3 === 0 && value % 5 === 0) {
-      return false;
-    } else if (value % 3 === 0) {
-      return true;
-    } else if (value % 5 === 0){
-      return true;
-    } else {
-      return false;
+  const res = [];
+  array.forEach(element => {
+    if ((element % 3 === 0) ^ (element % 5 === 0)) {
+      res.push(element);
     }
-  }
-
-  const res = array.filter(isDivisible);
+  });
   return res;
 
 }
