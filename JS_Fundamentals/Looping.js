@@ -9,7 +9,6 @@ function fizzBuzz(array) {
     }
   });
   return res;
-
 }
 
 // Return true if 'number' is prime, false otherwise.
